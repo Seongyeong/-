@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.client()
 
@@ -16,6 +17,7 @@ async def on_messag(message):
     if message.content.startswich("드르륵"):
         await message.channel.sand("그래")
 
-
-client.run("NzQyMDk1Nzc0OTg4NTAxMDAz.XzBIjA.i07wMN6RsGnVyC02alHu9OpwrEE")
-
+        
+        
+access_token = os.environ["bot_TOKEN"]
+client.run(access_token)
